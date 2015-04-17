@@ -1,3 +1,28 @@
+OpenZWave Control Panel
+Created by Greg Satz
+Updated by Ian Clasbey, 2015
+
+New installation instructions:
+This installer works only on GNU Linux, is not portable, and has unnecessary dependencies. I'll re-write it for a proper portable make system later.
+
+This has only been tested against Debian and Ubuntu. I know it won't work on many systems.
+
+To install:
+Requires: BASH shell (uses some specific commands now), tar, GNU make, and luck. 
+
+This installer should resolve all dependencies etc. Key word is should.
+
+Just download this folder, then run "./installer.sh". 
+
+The executable will be build/ozwcp 
+
+to run, the syntax is ozwcp -p <portname>
+
+Please note: the devices are generally owned by root, so this program will either need to run as root (you take your life into your own hands) or you need to change the permissions on the device interface.
+
+
+
+// Old read me below
 OpenZWave Control Panel v0.2a 8/8/2011
 
 Welcome to a very alpha release of the OpenZWave Control Panel.
@@ -8,7 +33,7 @@ This README for the OpenZWave Control Panel will attempt to provide the
 necessary information to compile, use and develop.
 
 The OpenZWave Control Panel (ozwcp for short) is an application built on
-the OpenZWave library http://code.google.com/p/open-zwave/ that permits
+the OpenZWave library http://www.openzwave.com/ that permits
 users to query, manage and monitor Z-Wave nodes and networks. It provides a
 web based user interface using AJAX principles.
 
@@ -18,13 +43,11 @@ development of the OpenZWave library.
 
 INSTALLATION
 
-To install ozwcp, visit http://code.google.com/p/openzwave-control-panel/
-and click on the "source" tab. You will need an svn client to check out a
-copy of the sources.
+To install ozwcp, visit https://github.com/OpenZWave/open-zwave-control-panel
+and click on the "Download Zip" button.
 
 You will need a copy of the latest version of the OpenZWave library at
-http://code.google.com/p/open-zwave/. Use the "source" tab on that project
-to get a copy.
+https://github.com/OpenZWave/open-zwave 
 
 ozwcp uses GNU's libmicrohttpd library available at
 http://www.gnu.org/software/libmicrohttpd/. I have set up this library
@@ -37,7 +60,7 @@ All three of these installations should share live in the same directory
 See Makefile for comments about Mac OS X support.
 
 Currently Windows is not supported. It should be possible to port this
-to the Window's cygwin environment if anyone is interested in pursing that
+to the Window's Cygwin environment if anyone is interested in pursing that
 option.
 
 OPERATION
@@ -50,7 +73,7 @@ ozwcp currently runs from the command line and takes two flags:
 Once started, connect to the hostname:postnum that ozwcp is running on
 using a web broswer and you will get to the user interface.
 
-Firefox has been extensively tested. Safari works. Intnernet Explorer
+Firefox has been extensively tested. Safari works. Internet Explorer
 doesn't work yet. This is also on the to do list.
 
 ozwcp currently must be run from within its distribution directory. It
@@ -60,7 +83,7 @@ run it as root depending on the port number you use.
 CAVEATS
 
 This is an alpha release at best. It has only ever worked in a single
-envionment. Please report bugs to the OpenZWave google groups mailing list:
+environment. Please report bugs to the OpenZWave Google groups mailing list:
 http://groups.google.com/group/openzwave.
 
 See the file TODO for a list of things on the to do list.
