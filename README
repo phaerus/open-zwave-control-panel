@@ -1,3 +1,28 @@
+OpenZWave Control Panel
+Created by Greg Satz
+Updated by Ian Clasbey, 2015
+
+New installation instructions:
+This installer works only on GNU Linux, is not portable, and has unnecessary dependencies. I'll re-write it for a proper portable make system later.
+
+This has only been tested against Debian and Ubuntu. I know it won't work on many systems.
+
+To install:
+Requires: BASH shell (uses some specific commands now), tar, GNU make, and luck. 
+
+This installer should resolve all dependencies etc. Key word is should.
+
+Just download this folder, then run "./installer.sh". 
+
+The executable will be build/ozwcp 
+
+to run, the syntax is ozwcp -p <portname>
+
+Please note: the devices are generally owned by root, so this program will either need to run as root (you take your life into your own hands) or you need to change the permissions on the device interface.
+
+
+
+// Old read me below
 OpenZWave Control Panel v0.2a 8/8/2011
 
 Welcome to a very alpha release of the OpenZWave Control Panel.

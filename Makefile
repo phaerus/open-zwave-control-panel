@@ -1,6 +1,7 @@
 #
 # Makefile for OpenzWave Control Panel application
-# Greg Satz
+# Greg Satz 2011
+# Ian Clasbey Modified and updated, 2015
 
 # GNU make only
 
@@ -33,7 +34,6 @@ INCLUDES := -I $(OPENZWAVE)/cpp/src -I $(OPENZWAVE)/cpp/src/command_classes/ \
 GNUTLS := #-lgnutls
 
 # for Linux uncomment out next three lines
-#LIBZWAVE := $(wildcard $(OPENZWAVE)/cpp/lib/linux/*.a)
 LIBZWAVE := $(wildcard $(OPENZWAVE)/*.a)
 LIBUSB := -ludev
 LIBS := $(LIBZWAVE) $(GNUTLS) $(LIBMICROHTTPD) -pthread $(LIBUSB)
