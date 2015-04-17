@@ -34,14 +34,14 @@ function pause (){
 
 function get_libmicrohttpd() {
 	#wget --directory-prefix="$targetDir" "ftp://ftp.gnu.org/gnu/libmicrohttpd/$libmicrohttpd_file"
-	cp $libmicrohttpd_file $targetDir
+	cp ./test/$libmicrohttpd_file $targetDir
 	tar -xzf "$targetDir/$libmicrohttpd_file" -C "$targetDir/"
 	mv "$targetDir/$libmicrohttpd_ver" "$targetDir/libmicrohttpd"
-	#cd "$targetDir/libmicrohttpd"
-	#./configure
-	#make --silent
-	#make --silent install
-	#cd ../
+	cd "$targetDir/libmicrohttpd"
+	./configure
+	make --silent
+	make --silent install
+	cd ../../
 	############
 	echo "LibHTTPD complete"
 	#############
@@ -49,13 +49,22 @@ function get_libmicrohttpd() {
 
 function get_openzwave() {
 	#wget --directory-prefix="$targetDir" "$openzwave_URL/$openzwave_file"
-	cp $openzwave_file $targetDir
+	cp ./test/$openzwave_file $targetDir
 	unzip "$targetDir/$openzwave_file" -d "$targetDir/"
 	mv "$targetDir/open-zwave-$openzwave_branch" "$targetDir/open-zwave"
+	cd "$targetDir/open-zwave"
+	make
+	cd ../../
 }
 
 get_libmicrohttpd
 get_openzwave
+cp ./* $targetDir/
+
+cp -R $targetDir/open-zwave/config $targetDir/
+cd $targetDir
+make
+
 
 
 
