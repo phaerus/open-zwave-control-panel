@@ -18,6 +18,8 @@ The executable will be build/ozwcp
 
 to run, the syntax is ozwcp -p <portname>
 
+If you have anothe program, such as OpenHab, running that is using your ZWave device, you will need to stop it before running OZWCP.
+
 Please note: the devices are generally owned by root, so this program will either need to run as root (you take your life into your own hands) or you need to change the permissions on the device interface.
 
 
